@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D42ECFFD2C6CCB9300010DC7 /* kitemiruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */; };
+		D42ECFFF2C6CCB9300010DC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */; };
+		D42ED0012C6CCB9700010DC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42ED0002C6CCB9700010DC7 /* Assets.xcassets */; };
+		D42ED0042C6CCB9700010DC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42ED0032C6CCB9700010DC7 /* Preview Assets.xcassets */; };
+		D42ED00E2C6CCB9800010DC7 /* kitemiruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED00D2C6CCB9800010DC7 /* kitemiruTests.swift */; };
+		D42ED0182C6CCB9800010DC7 /* kitemiruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0172C6CCB9800010DC7 /* kitemiruUITests.swift */; };
+		D42ED01A2C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0192C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D42ED00A2C6CCB9800010DC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D42ECFF12C6CCB9300010DC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D42ECFF82C6CCB9300010DC7;
+			remoteInfo = kitemiru;
+		};
+		D42ED0142C6CCB9800010DC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D42ECFF12C6CCB9300010DC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D42ECFF82C6CCB9300010DC7;
+			remoteInfo = kitemiru;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D42ECFF92C6CCB9300010DC7 /* kitemiru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitemiru.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitemiruApp.swift; sourceTree = "<group>"; };
+		D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D42ED0002C6CCB9700010DC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D42ED0032C6CCB9700010DC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D42ED0092C6CCB9700010DC7 /* kitemiruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kitemiruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42ED00D2C6CCB9800010DC7 /* kitemiruTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitemiruTests.swift; sourceTree = "<group>"; };
+		D42ED0132C6CCB9800010DC7 /* kitemiruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kitemiruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42ED0172C6CCB9800010DC7 /* kitemiruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitemiruUITests.swift; sourceTree = "<group>"; };
+		D42ED0192C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitemiruUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D42ECFF62C6CCB9300010DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED0062C6CCB9700010DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED0102C6CCB9800010DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D42ECFF02C6CCB9300010DC7 = {
+			isa = PBXGroup;
+			children = (
+				D42ECFFB2C6CCB9300010DC7 /* kitemiru */,
+				D42ED00C2C6CCB9800010DC7 /* kitemiruTests */,
+				D42ED0162C6CCB9800010DC7 /* kitemiruUITests */,
+				D42ECFFA2C6CCB9300010DC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D42ECFFA2C6CCB9300010DC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D42ECFF92C6CCB9300010DC7 /* kitemiru.app */,
+				D42ED0092C6CCB9700010DC7 /* kitemiruTests.xctest */,
+				D42ED0132C6CCB9800010DC7 /* kitemiruUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D42ECFFB2C6CCB9300010DC7 /* kitemiru */ = {
+			isa = PBXGroup;
+			children = (
+				D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */,
+				D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */,
+				D42ED0002C6CCB9700010DC7 /* Assets.xcassets */,
+				D42ED0022C6CCB9700010DC7 /* Preview Content */,
+			);
+			path = kitemiru;
+			sourceTree = "<group>";
+		};
+		D42ED0022C6CCB9700010DC7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED0032C6CCB9700010DC7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D42ED00C2C6CCB9800010DC7 /* kitemiruTests */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED00D2C6CCB9800010DC7 /* kitemiruTests.swift */,
+			);
+			path = kitemiruTests;
+			sourceTree = "<group>";
+		};
+		D42ED0162C6CCB9800010DC7 /* kitemiruUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED0172C6CCB9800010DC7 /* kitemiruUITests.swift */,
+				D42ED0192C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift */,
+			);
+			path = kitemiruUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D42ECFF82C6CCB9300010DC7 /* kitemiru */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42ED01D2C6CCB9800010DC7 /* Build configuration list for PBXNativeTarget "kitemiru" */;
+			buildPhases = (
+				D42ECFF52C6CCB9300010DC7 /* Sources */,
+				D42ECFF62C6CCB9300010DC7 /* Frameworks */,
+				D42ECFF72C6CCB9300010DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kitemiru;
+			productName = kitemiru;
+			productReference = D42ECFF92C6CCB9300010DC7 /* kitemiru.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D42ED0082C6CCB9700010DC7 /* kitemiruTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42ED0202C6CCB9800010DC7 /* Build configuration list for PBXNativeTarget "kitemiruTests" */;
+			buildPhases = (
+				D42ED0052C6CCB9700010DC7 /* Sources */,
+				D42ED0062C6CCB9700010DC7 /* Frameworks */,
+				D42ED0072C6CCB9700010DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D42ED00B2C6CCB9800010DC7 /* PBXTargetDependency */,
+			);
+			name = kitemiruTests;
+			productName = kitemiruTests;
+			productReference = D42ED0092C6CCB9700010DC7 /* kitemiruTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D42ED0122C6CCB9800010DC7 /* kitemiruUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42ED0232C6CCB9800010DC7 /* Build configuration list for PBXNativeTarget "kitemiruUITests" */;
+			buildPhases = (
+				D42ED00F2C6CCB9800010DC7 /* Sources */,
+				D42ED0102C6CCB9800010DC7 /* Frameworks */,
+				D42ED0112C6CCB9800010DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D42ED0152C6CCB9800010DC7 /* PBXTargetDependency */,
+			);
+			name = kitemiruUITests;
+			productName = kitemiruUITests;
+			productReference = D42ED0132C6CCB9800010DC7 /* kitemiruUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D42ECFF12C6CCB9300010DC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D42ECFF82C6CCB9300010DC7 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					D42ED0082C6CCB9700010DC7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D42ECFF82C6CCB9300010DC7;
+					};
+					D42ED0122C6CCB9800010DC7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D42ECFF82C6CCB9300010DC7;
+					};
+				};
+			};
+			buildConfigurationList = D42ECFF42C6CCB9300010DC7 /* Build configuration list for PBXProject "kitemiru" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D42ECFF02C6CCB9300010DC7;
+			productRefGroup = D42ECFFA2C6CCB9300010DC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D42ECFF82C6CCB9300010DC7 /* kitemiru */,
+				D42ED0082C6CCB9700010DC7 /* kitemiruTests */,
+				D42ED0122C6CCB9800010DC7 /* kitemiruUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D42ECFF72C6CCB9300010DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED0042C6CCB9700010DC7 /* Preview Assets.xcassets in Resources */,
+				D42ED0012C6CCB9700010DC7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED0072C6CCB9700010DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED0112C6CCB9800010DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D42ECFF52C6CCB9300010DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ECFFF2C6CCB9300010DC7 /* ContentView.swift in Sources */,
+				D42ECFFD2C6CCB9300010DC7 /* kitemiruApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED0052C6CCB9700010DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED00E2C6CCB9800010DC7 /* kitemiruTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42ED00F2C6CCB9800010DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42ED01A2C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift in Sources */,
+				D42ED0182C6CCB9800010DC7 /* kitemiruUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D42ED00B2C6CCB9800010DC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D42ECFF82C6CCB9300010DC7 /* kitemiru */;
+			targetProxy = D42ED00A2C6CCB9800010DC7 /* PBXContainerItemProxy */;
+		};
+		D42ED0152C6CCB9800010DC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D42ECFF82C6CCB9300010DC7 /* kitemiru */;
+			targetProxy = D42ED0142C6CCB9800010DC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D42ED01B2C6CCB9800010DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D42ED01C2C6CCB9800010DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D42ED01E2C6CCB9800010DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kitemiru/Preview Content\"";
+				DEVELOPMENT_TEAM = BR3T8YBB5L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.yuukirinnma.kitemiru;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D42ED01F2C6CCB9800010DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kitemiru/Preview Content\"";
+				DEVELOPMENT_TEAM = BR3T8YBB5L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.yuukirinnma.kitemiru;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D42ED0212C6CCB9800010DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR3T8YBB5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.yuukirinnma.kitemiruTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kitemiru.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kitemiru";
+			};
+			name = Debug;
+		};
+		D42ED0222C6CCB9800010DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR3T8YBB5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.yuukirinnma.kitemiruTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kitemiru.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kitemiru";
+			};
+			name = Release;
+		};
+		D42ED0242C6CCB9800010DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR3T8YBB5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.yuukirinnma.kitemiruUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kitemiru;
+			};
+			name = Debug;
+		};
+		D42ED0252C6CCB9800010DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BR3T8YBB5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.yuukirinnma.kitemiruUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kitemiru;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D42ECFF42C6CCB9300010DC7 /* Build configuration list for PBXProject "kitemiru" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42ED01B2C6CCB9800010DC7 /* Debug */,
+				D42ED01C2C6CCB9800010DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D42ED01D2C6CCB9800010DC7 /* Build configuration list for PBXNativeTarget "kitemiru" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42ED01E2C6CCB9800010DC7 /* Debug */,
+				D42ED01F2C6CCB9800010DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D42ED0202C6CCB9800010DC7 /* Build configuration list for PBXNativeTarget "kitemiruTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42ED0212C6CCB9800010DC7 /* Debug */,
+				D42ED0222C6CCB9800010DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D42ED0232C6CCB9800010DC7 /* Build configuration list for PBXNativeTarget "kitemiruUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42ED0242C6CCB9800010DC7 /* Debug */,
+				D42ED0252C6CCB9800010DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D42ECFF12C6CCB9300010DC7 /* Project object */;
+}
