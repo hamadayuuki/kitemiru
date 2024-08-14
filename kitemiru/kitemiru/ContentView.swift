@@ -13,28 +13,28 @@ struct ContentView: View {
     @State var factType: FaceType = .all
 
     @State private var detectTime: CGFloat = 0.0
-    @State private var inputUIImage: UIImage = .init(named: "face01")!
-    @State private var outputUIImage: UIImage = .init(named: "face01")!
+    @State private var inputUIImage: UIImage? = .init(named: "face01")
+    @State private var outputUIImage: UIImage? = .init(named: "face01")
     private let imageWidth: CGFloat = 150
 
     var body: some View {
         VStack(spacing: 24) {
             HStack(spacing: 12) {
-                Image(uiImage: inputUIImage)
+                Image(uiImage: inputUIImage!)
                     .resizable()
                     .frame(width: imageWidth, height: imageWidth)
 
-                Image(uiImage: outputUIImage)
+                Image(uiImage: outputUIImage!)
                     .resizable()
                     .frame(width: imageWidth, height: imageWidth)
             }
 
             ZStack {
-                Image(uiImage: inputUIImage)
+                Image(uiImage: inputUIImage!)
                     .resizable()
                     .frame(width: imageWidth + 100, height: imageWidth + 100)
 
-                Image(uiImage: outputUIImage)
+                Image(uiImage: outputUIImage!)
                     .resizable()
                     .frame(width: imageWidth + 100, height: imageWidth + 100)
                     .opacity(0.5)
@@ -42,24 +42,22 @@ struct ContentView: View {
 
             Text("Time: \(detectTime)ms")
 
-            Button(action: {
-                let correctOrientImage = getCorrectOrientationUIImage(uiImage: inputUIImage)
-                inputUIImage = correctOrientImage
-                inference(uiImage: correctOrientImage)
-            }) {
-                Text("Restart")
-                    .fontWeight(.bold)
-                    .frame(width: 250, height: 50)
-                    .offset(x: 0, y: 24)
-            }
+            PhotoPickerView(selectedImage: $inputUIImage)
         }
         .padding()
         .onAppear {
             initCoreMLModel()
-            let correctOrientImage = getCorrectOrientationUIImage(uiImage: inputUIImage)
-            inputUIImage = correctOrientImage
-            inference(uiImage: correctOrientImage)
+            segmentation()
         }
+        .onChange(of: inputUIImage) {
+            segmentation()
+        }
+    }
+
+    private func segmentation() {
+        let correctOrientImage = getCorrectOrientationUIImage(uiImage: inputUIImage!)
+        inputUIImage = correctOrientImage
+        inference(uiImage: correctOrientImage)
     }
 
     private func initCoreMLModel() {
