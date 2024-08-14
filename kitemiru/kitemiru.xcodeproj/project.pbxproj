@@ -14,6 +14,10 @@
 		D42ED00E2C6CCB9800010DC7 /* kitemiruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED00D2C6CCB9800010DC7 /* kitemiruTests.swift */; };
 		D42ED0182C6CCB9800010DC7 /* kitemiruUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0172C6CCB9800010DC7 /* kitemiruUITests.swift */; };
 		D42ED01A2C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0192C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift */; };
+		D42ED02A2C6CCF3B00010DC7 /* CoreMLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0272C6CCF3900010DC7 /* CoreMLHelpers.swift */; };
+		D42ED02B2C6CCF3B00010DC7 /* faceParsing.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = D42ED0282C6CCF3B00010DC7 /* faceParsing.mlmodelc */; };
+		D42ED02C2C6CCF3B00010DC7 /* faceParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */; };
+		D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		D42ED0132C6CCB9800010DC7 /* kitemiruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kitemiruUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42ED0172C6CCB9800010DC7 /* kitemiruUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitemiruUITests.swift; sourceTree = "<group>"; };
 		D42ED0192C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitemiruUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D42ED0272C6CCF3900010DC7 /* CoreMLHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMLHelpers.swift; sourceTree = "<group>"; };
+		D42ED0282C6CCF3B00010DC7 /* faceParsing.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = faceParsing.mlmodelc; sourceTree = "<group>"; };
+		D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceParsing.swift; sourceTree = "<group>"; };
+		D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,8 @@
 		D42ECFFB2C6CCB9300010DC7 /* kitemiru */ = {
 			isa = PBXGroup;
 			children = (
+				D42ED02D2C6CD28000010DC7 /* Core */,
+				D42ED0262C6CCF1500010DC7 /* FaceParsing */,
 				D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */,
 				D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */,
 				D42ED0002C6CCB9700010DC7 /* Assets.xcassets */,
@@ -125,6 +135,32 @@
 				D42ED0192C6CCB9800010DC7 /* kitemiruUITestsLaunchTests.swift */,
 			);
 			path = kitemiruUITests;
+			sourceTree = "<group>";
+		};
+		D42ED0262C6CCF1500010DC7 /* FaceParsing */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED0272C6CCF3900010DC7 /* CoreMLHelpers.swift */,
+				D42ED0282C6CCF3B00010DC7 /* faceParsing.mlmodelc */,
+				D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */,
+			);
+			path = FaceParsing;
+			sourceTree = "<group>";
+		};
+		D42ED02D2C6CD28000010DC7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED02E2C6CD28A00010DC7 /* Extension */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D42ED02E2C6CD28A00010DC7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42ED0042C6CCB9700010DC7 /* Preview Assets.xcassets in Resources */,
+				D42ED02B2C6CCF3B00010DC7 /* faceParsing.mlmodelc in Resources */,
 				D42ED0012C6CCB9700010DC7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */,
 				D42ECFFF2C6CCB9300010DC7 /* ContentView.swift in Sources */,
 				D42ECFFD2C6CCB9300010DC7 /* kitemiruApp.swift in Sources */,
+				D42ED02A2C6CCF3B00010DC7 /* CoreMLHelpers.swift in Sources */,
+				D42ED02C2C6CCF3B00010DC7 /* faceParsing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
