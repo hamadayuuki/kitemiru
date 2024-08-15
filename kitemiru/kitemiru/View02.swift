@@ -13,21 +13,24 @@ import Vision
 struct View02: View {
     @State private var inputUIImage: UIImage? = .init(named: "face01")
     @State private var faceObservations: [VNFaceObservation] = []
+    @State private var detectTime: CGFloat = 0.0
 
     var body: some View {
         VStack(spacing: 24) {
             Image(uiImage: inputUIImage!)
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 230, height: 230)
 
             Image(uiImage: inputUIImage!)
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 230, height: 230)
                 .overlay(
                     GeometryReader { geometry in
                         reactangles(geometry: geometry)
                     }
                 )
+
+            Text("Time: \(detectTime)ms")
 
             PhotoPickerView(selectedImage: $inputUIImage)
         }
@@ -67,7 +70,10 @@ struct View02: View {
         let handler = VNImageRequestHandler(cvPixelBuffer: pixcelBuffer)   // CIImageは回転情報を持たないためCVPixelBufferを採用
 
         do {
+            detectTime = 0.0
+            let startTime = Date()
             try handler.perform([faceDetectionRequest])
+            detectTime = Date().timeIntervalSince(startTime) * 1_000   // ms
             guard let observations: [VNFaceObservation] = faceDetectionRequest.results else { return }
             faceObservations = observations
         } catch {
