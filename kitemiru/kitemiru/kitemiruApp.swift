@@ -11,7 +11,7 @@ import SwiftUI
 struct kitemiruApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            View02()
         }
     }
 }

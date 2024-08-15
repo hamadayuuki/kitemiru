@@ -19,6 +19,8 @@
 		D42ED02C2C6CCF3B00010DC7 /* faceParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */; };
 		D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */; };
 		D42ED0322C6CDB6700010DC7 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */; };
+		D42ED0342C6DF9C400010DC7 /* View02.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0332C6DF9C400010DC7 /* View02.swift */; };
+		D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0352C6DFA3200010DC7 /* FaceType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceParsing.swift; sourceTree = "<group>"; };
 		D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+extension.swift"; sourceTree = "<group>"; };
 		D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		D42ED0332C6DF9C400010DC7 /* View02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View02.swift; sourceTree = "<group>"; };
+		D42ED0352C6DFA3200010DC7 /* FaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				D42ED0262C6CCF1500010DC7 /* FaceParsing */,
 				D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */,
 				D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */,
+				D42ED0332C6DF9C400010DC7 /* View02.swift */,
 				D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */,
 				D42ED0002C6CCB9700010DC7 /* Assets.xcassets */,
 				D42ED0022C6CCB9700010DC7 /* Preview Content */,
@@ -146,6 +151,7 @@
 				D42ED0272C6CCF3900010DC7 /* CoreMLHelpers.swift */,
 				D42ED0282C6CCF3B00010DC7 /* faceParsing.mlmodelc */,
 				D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */,
+				D42ED0352C6DFA3200010DC7 /* FaceType.swift */,
 			);
 			path = FaceParsing;
 			sourceTree = "<group>";
@@ -299,7 +305,9 @@
 			files = (
 				D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */,
 				D42ED0322C6CDB6700010DC7 /* PhotoPickerView.swift in Sources */,
+				D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */,
 				D42ECFFF2C6CCB9300010DC7 /* ContentView.swift in Sources */,
+				D42ED0342C6DF9C400010DC7 /* View02.swift in Sources */,
 				D42ECFFD2C6CCB9300010DC7 /* kitemiruApp.swift in Sources */,
 				D42ED02A2C6CCF3B00010DC7 /* CoreMLHelpers.swift in Sources */,
 				D42ED02C2C6CCF3B00010DC7 /* faceParsing.swift in Sources */,
