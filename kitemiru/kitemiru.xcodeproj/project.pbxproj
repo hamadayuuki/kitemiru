@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D42ECFFD2C6CCB9300010DC7 /* kitemiruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */; };
-		D42ECFFF2C6CCB9300010DC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */; };
+		D42ECFFF2C6CCB9300010DC7 /* FaceSegmentatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ECFFE2C6CCB9300010DC7 /* FaceSegmentatView.swift */; };
 		D42ED0012C6CCB9700010DC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42ED0002C6CCB9700010DC7 /* Assets.xcassets */; };
 		D42ED0042C6CCB9700010DC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D42ED0032C6CCB9700010DC7 /* Preview Assets.xcassets */; };
 		D42ED00E2C6CCB9800010DC7 /* kitemiruTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED00D2C6CCB9800010DC7 /* kitemiruTests.swift */; };
@@ -19,6 +19,10 @@
 		D42ED02C2C6CCF3B00010DC7 /* faceParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */; };
 		D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */; };
 		D42ED0322C6CDB6700010DC7 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */; };
+		D42ED0342C6DF9C400010DC7 /* FaceDetectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0332C6DF9C400010DC7 /* FaceDetectView.swift */; };
+		D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0352C6DFA3200010DC7 /* FaceType.swift */; };
+		D42ED0382C6DFF8800010DC7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0372C6DFF8800010DC7 /* HomeView.swift */; };
+		D42ED03B2C6E0EBD00010DC7 /* FaceSegmentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +45,7 @@
 /* Begin PBXFileReference section */
 		D42ECFF92C6CCB9300010DC7 /* kitemiru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitemiru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kitemiruApp.swift; sourceTree = "<group>"; };
-		D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D42ECFFE2C6CCB9300010DC7 /* FaceSegmentatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSegmentatView.swift; sourceTree = "<group>"; };
 		D42ED0002C6CCB9700010DC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D42ED0032C6CCB9700010DC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D42ED0092C6CCB9700010DC7 /* kitemiruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kitemiruTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +58,10 @@
 		D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = faceParsing.swift; sourceTree = "<group>"; };
 		D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+extension.swift"; sourceTree = "<group>"; };
 		D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		D42ED0332C6DF9C400010DC7 /* FaceDetectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectView.swift; sourceTree = "<group>"; };
+		D42ED0352C6DFA3200010DC7 /* FaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceType.swift; sourceTree = "<group>"; };
+		D42ED0372C6DFF8800010DC7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSegmentationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				D42ED02D2C6CD28000010DC7 /* Core */,
-				D42ED0262C6CCF1500010DC7 /* FaceParsing */,
+				D42ED03D2C6E253500010DC7 /* ML */,
 				D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */,
-				D42ECFFE2C6CCB9300010DC7 /* ContentView.swift */,
-				D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */,
+				D42ED0372C6DFF8800010DC7 /* HomeView.swift */,
+				D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */,
 				D42ED0002C6CCB9700010DC7 /* Assets.xcassets */,
 				D42ED0022C6CCB9700010DC7 /* Preview Content */,
 			);
@@ -146,6 +154,7 @@
 				D42ED0272C6CCF3900010DC7 /* CoreMLHelpers.swift */,
 				D42ED0282C6CCF3B00010DC7 /* faceParsing.mlmodelc */,
 				D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */,
+				D42ED0352C6DFA3200010DC7 /* FaceType.swift */,
 			);
 			path = FaceParsing;
 			sourceTree = "<group>";
@@ -153,6 +162,7 @@
 		D42ED02D2C6CD28000010DC7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D42ED0392C6E037800010DC7 /* Component */,
 				D42ED02E2C6CD28A00010DC7 /* Extension */,
 			);
 			path = Core;
@@ -164,6 +174,32 @@
 				D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D42ED0392C6E037800010DC7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		D42ED03C2C6E245100010DC7 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				D42ECFFE2C6CCB9300010DC7 /* FaceSegmentatView.swift */,
+				D42ED0332C6DF9C400010DC7 /* FaceDetectView.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		D42ED03D2C6E253500010DC7 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED0262C6CCF1500010DC7 /* FaceParsing */,
+				D42ED03C2C6E245100010DC7 /* Example */,
+			);
+			path = ML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,9 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42ED0382C6DFF8800010DC7 /* HomeView.swift in Sources */,
 				D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */,
 				D42ED0322C6CDB6700010DC7 /* PhotoPickerView.swift in Sources */,
-				D42ECFFF2C6CCB9300010DC7 /* ContentView.swift in Sources */,
+				D42ED03B2C6E0EBD00010DC7 /* FaceSegmentationView.swift in Sources */,
+				D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */,
+				D42ECFFF2C6CCB9300010DC7 /* FaceSegmentatView.swift in Sources */,
+				D42ED0342C6DF9C400010DC7 /* FaceDetectView.swift in Sources */,
 				D42ECFFD2C6CCB9300010DC7 /* kitemiruApp.swift in Sources */,
 				D42ED02A2C6CCF3B00010DC7 /* CoreMLHelpers.swift in Sources */,
 				D42ED02C2C6CCF3B00010DC7 /* faceParsing.swift in Sources */,

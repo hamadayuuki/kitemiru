@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FaceSegmentatView.swift
 //  kitemiru
 //
 //  Created by 濵田　悠樹 on 2024/08/14.
@@ -8,7 +8,9 @@
 import SwiftUI
 import Vision
 
-struct ContentView: View {
+// TODO: ファイル名変更, 今は仮置きの名称
+
+struct FaceSegmentatView: View {
     @State var coreMLRequest: VNCoreMLRequest?
     @State var factType: FaceType = .all
 
@@ -19,6 +21,23 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 24) {
+            segmentationResult()
+            PhotoPickerView(selectedImage: $inputUIImage)
+        }
+        .padding()
+        .onAppear {
+            initCoreMLModel()
+            segmentation()
+        }
+        .onChange(of: inputUIImage) {
+            segmentation()
+        }
+    }
+
+    // MARK: - ui components
+
+    private func segmentationResult() -> some View {
+        Group {
             HStack(spacing: 12) {
                 Image(uiImage: inputUIImage!)
                     .resizable()
@@ -41,18 +60,10 @@ struct ContentView: View {
             }
 
             Text("Time: \(detectTime)ms")
-
-            PhotoPickerView(selectedImage: $inputUIImage)
-        }
-        .padding()
-        .onAppear {
-            initCoreMLModel()
-            segmentation()
-        }
-        .onChange(of: inputUIImage) {
-            segmentation()
         }
     }
+
+    // MARK: - logics
 
     private func segmentation() {
         let correctOrientImage = getCorrectOrientationUIImage(uiImage: inputUIImage!)
@@ -94,8 +105,8 @@ struct ContentView: View {
     private func inference(uiImage: UIImage) {
         
         guard let coreMLRequest = coreMLRequest else {fatalError("Model initialization failed.")}
-        guard let ciImage = CIImage(image: uiImage) else {fatalError("Image failed.")}
-        let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        guard let pixcelBuffer = uiImage.pixelBuffer() else { fatalError("Image failed.") }
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixcelBuffer)   // CIImageは回転情報を持たないためCVPixelBufferを採用
 
         do {
             try handler.perform([coreMLRequest])
@@ -103,6 +114,7 @@ struct ContentView: View {
             let startTime = Date()
             guard let result = coreMLRequest.results?.first as? VNCoreMLFeatureValueObservation else {fatalError("Inference failed.")}
             detectTime = Date().timeIntervalSince(startTime) * 1_000   // ms
+            let ciImage = CIImage(cvPixelBuffer: pixcelBuffer)
             let multiArray = result.featureValue.multiArrayValue
             guard let  outputCGImage = multiArray?.cgImage(min: 0, max: 18, channel: nil, outputType: factType.rawValue) else {fatalError("Image processing failed.")}
             let outputCIImage = CIImage(cgImage: outputCGImage).resize(as: ciImage.extent.size)
@@ -117,24 +129,6 @@ struct ContentView: View {
     }
 }
 
-enum FaceType: Int {
-    typealias RawValue = Int
-    case all = 0
-    case skin = 1
-    case eyeBrowLeft = 2
-    case eyeBrowRight = 3
-    case eyeLeft = 4
-    case eyeRight = 5
-    case nose = 10
-    case teeth = 11
-    case lipUpper = 12
-    case lipLower = 13
-    case neck = 14
-    case cloth = 16
-    case hair = 17
-    case hat = 18
-}
-
 #Preview {
-    ContentView()
+    FaceSegmentatView()
 }
