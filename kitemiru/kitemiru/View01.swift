@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  View01.swift
 //  kitemiru
 //
 //  Created by 濵田　悠樹 on 2024/08/14.
@@ -8,7 +8,9 @@
 import SwiftUI
 import Vision
 
-struct ContentView: View {
+// TODO: ファイル名変更, 今は仮置きの名称
+
+struct View01: View {
     @State var coreMLRequest: VNCoreMLRequest?
     @State var factType: FaceType = .all
 
@@ -127,5 +129,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    View01()
 }
