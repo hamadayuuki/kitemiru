@@ -1,5 +1,5 @@
 //
-//  View01.swift
+//  FaceSegmentatView.swift
 //  kitemiru
 //
 //  Created by 濵田　悠樹 on 2024/08/14.
@@ -10,7 +10,7 @@ import Vision
 
 // TODO: ファイル名変更, 今は仮置きの名称
 
-struct View01: View {
+struct FaceSegmentatView: View {
     @State var coreMLRequest: VNCoreMLRequest?
     @State var factType: FaceType = .all
 
@@ -130,5 +130,5 @@ struct View01: View {
 }
 
 #Preview {
-    View01()
+    FaceSegmentatView()
 }

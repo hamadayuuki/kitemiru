@@ -22,9 +22,9 @@ struct HomeView: View {
 
             switch selection {
             case .kitemiru:
-                View01()
+                FaceSegmentatView()
             case .pickup:
-                View02()
+                FaceDetectView()
             }
         }
         .frame(height: 600, alignment: .top)

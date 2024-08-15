@@ -1,5 +1,5 @@
 //
-//  View02.swift
+//  FaceDetectionView.swift
 //  kitemiru
 //
 //  Created by 濵田　悠樹 on 2024/08/15.
@@ -10,7 +10,7 @@
 import SwiftUI
 import Vision
 
-struct View02: View {
+struct FaceDetectView: View {
     @State private var inputUIImage: UIImage? = .init(named: "face01")
     @State private var faceObservations: [VNFaceObservation] = []
     @State private var detectTime: CGFloat = 0.0
@@ -94,5 +94,5 @@ struct View02: View {
 }
 
 #Preview {
-    View02()
+    FaceDetectView()
 }
