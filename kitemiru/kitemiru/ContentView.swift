@@ -19,6 +19,23 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 24) {
+            segmentationResult()
+            PhotoPickerView(selectedImage: $inputUIImage)
+        }
+        .padding()
+        .onAppear {
+            initCoreMLModel()
+            segmentation()
+        }
+        .onChange(of: inputUIImage) {
+            segmentation()
+        }
+    }
+
+    // MARK: - ui components
+
+    private func segmentationResult() -> some View {
+        Group {
             HStack(spacing: 12) {
                 Image(uiImage: inputUIImage!)
                     .resizable()
@@ -41,18 +58,10 @@ struct ContentView: View {
             }
 
             Text("Time: \(detectTime)ms")
-
-            PhotoPickerView(selectedImage: $inputUIImage)
-        }
-        .padding()
-        .onAppear {
-            initCoreMLModel()
-            segmentation()
-        }
-        .onChange(of: inputUIImage) {
-            segmentation()
         }
     }
+
+    // MARK: - logics
 
     private func segmentation() {
         let correctOrientImage = getCorrectOrientationUIImage(uiImage: inputUIImage!)
@@ -115,24 +124,6 @@ struct ContentView: View {
             print(error)
         }
     }
-}
-
-enum FaceType: Int {
-    typealias RawValue = Int
-    case all = 0
-    case skin = 1
-    case eyeBrowLeft = 2
-    case eyeBrowRight = 3
-    case eyeLeft = 4
-    case eyeRight = 5
-    case nose = 10
-    case teeth = 11
-    case lipUpper = 12
-    case lipLower = 13
-    case neck = 14
-    case cloth = 16
-    case hair = 17
-    case hat = 18
 }
 
 #Preview {
