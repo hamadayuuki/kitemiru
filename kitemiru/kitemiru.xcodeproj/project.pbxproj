@@ -116,7 +116,6 @@
 				D42ED0372C6DFF8800010DC7 /* HomeView.swift */,
 				D42ECFFE2C6CCB9300010DC7 /* View01.swift */,
 				D42ED0332C6DF9C400010DC7 /* View02.swift */,
-				D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */,
 				D42ED0002C6CCB9700010DC7 /* Assets.xcassets */,
 				D42ED0022C6CCB9700010DC7 /* Preview Content */,
 			);
@@ -162,6 +161,7 @@
 		D42ED02D2C6CD28000010DC7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D42ED0392C6E037800010DC7 /* Component */,
 				D42ED02E2C6CD28A00010DC7 /* Extension */,
 			);
 			path = Core;
@@ -173,6 +173,14 @@
 				D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D42ED0392C6E037800010DC7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED0312C6CDB6700010DC7 /* PhotoPickerView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -28,8 +28,13 @@ struct View02: View {
                         reactangles(geometry: geometry)
                     }
                 )
+
+            PhotoPickerView(selectedImage: $inputUIImage)
         }
         .onAppear {
+            faceDetectRectangles()
+        }
+        .onChange(of: inputUIImage) {
             faceDetectRectangles()
         }
     }
