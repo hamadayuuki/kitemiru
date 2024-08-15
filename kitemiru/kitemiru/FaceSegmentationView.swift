@@ -10,13 +10,14 @@ import Vision
 
 struct FaceSegmentationView: View {
     @State var coreMLRequest: VNCoreMLRequest?
-    @State var factType: FaceType = .all
+    @State var factType: FaceType = .hair
 
     private let imageSizeS = CGSize(width: 100, height: 100)
     private let imageSizeM = CGSize(width: 250, height: 250)
     @State private var coordinateUIImage: UIImage? = nil
     @State private var coordFaceObservations: VNFaceObservation? = nil
     @State private var userFaceUIImage: UIImage? = UIImage(named: "detectedFace01")
+    @State private var segmentedUserFaceCGImage: CGImage? = nil
     @State private var targetUIImage: UIImage? = nil
 
     var body: some View {
@@ -39,7 +40,10 @@ struct FaceSegmentationView: View {
             initCoreMLModel()
         }
         .onChange(of: coordinateUIImage) {
+            userFaceUIImage = UIImage(named: "detectedFace01")
             faceDetectRectangles()
+            segmentation(uiImage: userFaceUIImage!)
+            clearUserFaceBackground()
         }
     }
 
@@ -112,6 +116,84 @@ struct FaceSegmentationView: View {
 
         return CGRect(x: x, y: y, width: width, height: height)
     }
+
+    private func segmentation(uiImage: UIImage) {
+        guard let coreMLRequest = coreMLRequest else {fatalError("Model initialization failed.")}
+        guard let pixcelBuffer = uiImage.pixelBuffer() else { fatalError("Image failed.") }
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixcelBuffer)   // CIImageは回転情報を持たないためCVPixelBufferを採用
+
+        do {
+            try handler.perform([coreMLRequest])
+            guard let result = coreMLRequest.results?.first as? VNCoreMLFeatureValueObservation else {fatalError("Inference failed.")}
+            let ciImage = CIImage(cvPixelBuffer: pixcelBuffer)
+            let multiArray = result.featureValue.multiArrayValue
+            guard let  outputCGImage = multiArray?.cgImage(min: 0, max: 18, channel: nil, outputType: factType.rawValue) else {fatalError("Image processing failed.")}
+            segmentedUserFaceCGImage = outputCGImage
+            let outputCIImage = CIImage(cgImage: outputCGImage).resize(as: ciImage.extent.size)
+            let context = CIContext()
+            guard let safeCGImage = context.createCGImage(outputCIImage, from: outputCIImage.extent) else {fatalError("Image processing failed.")}
+            userFaceUIImage = UIImage(cgImage: safeCGImage)
+        } catch let error {
+            print(error)
+        }
+    }
+
+    private func clearUserFaceBackground() {
+        guard let segmentedUserFaceCGImage else { return }
+        let data = segmentedUserFaceCGImage.dataProvider!.data
+        let length = CFDataGetLength(data)
+        var rawData: [UInt8] = .init(repeating: 0, count: length)
+        CFDataGetBytes(data, CFRange(location: 0, length: length), &rawData)
+        let segmentedUserFacePixelData = rawData
+
+        guard let uiImage = userFaceUIImage else { return }
+        guard let cgImage = uiImage.cgImage else { return }
+        let width = cgImage.width
+        let height = cgImage.height
+
+        // ピクセルバッファを準備
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bytesPerPixel = 4
+        let bytesPerRow = bytesPerPixel * width
+        let bitsPerComponent = 8
+        var pixelData = [UInt8](repeating: 0, count: Int(height * width * bytesPerPixel))
+
+        guard let context = CGContext(data: &pixelData,
+                                      width: width,
+                                      height: height,
+                                      bitsPerComponent: bitsPerComponent,
+                                      bytesPerRow: bytesPerRow,
+                                      space: colorSpace,
+                                      bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue) else { return }
+
+        // 画像を描画してピクセルデータを取得
+        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+        
+        // 左半分のピクセルデータを透明に置き換える
+        for y in 0..<height {
+            for x in 0..<width {
+                let pixelIndex = (y * width + x) * bytesPerPixel
+
+//                print(segmentedUserFacePixelData[pixelIndex + 0])
+//                print(segmentedUserFacePixelData[pixelIndex + 1])
+//                print(segmentedUserFacePixelData[pixelIndex + 2])
+//                print(segmentedUserFacePixelData[pixelIndex + 3])
+//                print()
+
+                if segmentedUserFacePixelData[pixelIndex + 0] == 0 &&
+                    segmentedUserFacePixelData[pixelIndex + 1] == 0 &&
+                    segmentedUserFacePixelData[pixelIndex + 2] == 0 {
+                    pixelData[pixelIndex + 0] = 0 // R
+                    pixelData[pixelIndex + 1] = 0 // G
+                    pixelData[pixelIndex + 2] = 0 // B
+                    pixelData[pixelIndex + 3] = 0 // A (透明)
+                }
+            }
+        }
+        guard let newCgImage = context.makeImage() else { return }
+        userFaceUIImage = UIImage(cgImage: newCgImage)
+    }
+
 }
 
 #Preview {
