@@ -105,8 +105,8 @@ struct View01: View {
     private func inference(uiImage: UIImage) {
         
         guard let coreMLRequest = coreMLRequest else {fatalError("Model initialization failed.")}
-        guard let ciImage = CIImage(image: uiImage) else {fatalError("Image failed.")}
-        let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        guard let pixcelBuffer = uiImage.pixelBuffer() else { fatalError("Image failed.") }
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixcelBuffer)   // CIImageは回転情報を持たないためCVPixelBufferを採用
 
         do {
             try handler.perform([coreMLRequest])
@@ -114,6 +114,7 @@ struct View01: View {
             let startTime = Date()
             guard let result = coreMLRequest.results?.first as? VNCoreMLFeatureValueObservation else {fatalError("Inference failed.")}
             detectTime = Date().timeIntervalSince(startTime) * 1_000   // ms
+            let ciImage = CIImage(cvPixelBuffer: pixcelBuffer)
             let multiArray = result.featureValue.multiArrayValue
             guard let  outputCGImage = multiArray?.cgImage(min: 0, max: 18, channel: nil, outputType: factType.rawValue) else {fatalError("Image processing failed.")}
             let outputCIImage = CIImage(cgImage: outputCGImage).resize(as: ciImage.extent.size)

@@ -62,9 +62,9 @@ struct View02: View {
 
     private func faceDetectRectangles() {
         guard let uiImage = inputUIImage else { fatalError("inputUIImage failed") }
-        guard let ciImage = CIImage(image: uiImage) else { fatalError("Image failed.") }
+        guard let pixcelBuffer = uiImage.pixelBuffer() else { fatalError("Image failed.") }
         let faceDetectionRequest = VNDetectFaceRectanglesRequest()
-        let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixcelBuffer)   // CIImageは回転情報を持たないためCVPixelBufferを採用
 
         do {
             try handler.perform([faceDetectionRequest])
