@@ -5,7 +5,7 @@
 //  Created by 濵田　悠樹 on 2024/08/15.
 //
 
-enum FaceType: Int {
+enum FaceType: Int, CaseIterable {
     typealias RawValue = Int
     case all = 0
     case skin = 1

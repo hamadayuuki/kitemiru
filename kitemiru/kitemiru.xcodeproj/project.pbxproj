@@ -23,6 +23,7 @@
 		D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0352C6DFA3200010DC7 /* FaceType.swift */; };
 		D42ED0382C6DFF8800010DC7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0372C6DFF8800010DC7 /* HomeView.swift */; };
 		D42ED03B2C6E0EBD00010DC7 /* FaceSegmentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */; };
+		D484D0052C70B64900CABEBC /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484D0042C70B64900CABEBC /* UIImage+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D42ED0352C6DFA3200010DC7 /* FaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceType.swift; sourceTree = "<group>"; };
 		D42ED0372C6DFF8800010DC7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSegmentationView.swift; sourceTree = "<group>"; };
+		D484D0042C70B64900CABEBC /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */,
+				D484D0042C70B64900CABEBC /* UIImage+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				D42ED0382C6DFF8800010DC7 /* HomeView.swift in Sources */,
 				D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */,
 				D42ED0322C6CDB6700010DC7 /* PhotoPickerView.swift in Sources */,
+				D484D0052C70B64900CABEBC /* UIImage+extension.swift in Sources */,
 				D42ED03B2C6E0EBD00010DC7 /* FaceSegmentationView.swift in Sources */,
 				D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */,
 				D42ECFFF2C6CCB9300010DC7 /* FaceSegmentatView.swift in Sources */,
