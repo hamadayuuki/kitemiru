@@ -1,5 +1,5 @@
 //
-//  FaceSegmentationView.swift
+//  KitemiruView.swift
 //  kitemiru
 //
 //  Created by 濵田　悠樹 on 2024/08/15.
@@ -13,7 +13,7 @@ private class Face {
     var ciImages: [CIImage] = []
 }
 
-struct FaceSegmentationView: View {
+struct KitemiruView: View {
     @State var coreMLRequest: VNCoreMLRequest?
     /// 顔のセグメンテーション結果を格納する
     private let faceCIImages: [CIImage] = []   // FaceType.all, .skin のCIImageが入る
@@ -185,5 +185,5 @@ struct FaceSegmentationView: View {
 }
 
 #Preview {
-    FaceSegmentationView()
+    KitemiruView()
 }
