@@ -22,7 +22,12 @@
 		D42ED0342C6DF9C400010DC7 /* FaceDetectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0332C6DF9C400010DC7 /* FaceDetectView.swift */; };
 		D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0352C6DFA3200010DC7 /* FaceType.swift */; };
 		D42ED0382C6DFF8800010DC7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED0372C6DFF8800010DC7 /* HomeView.swift */; };
-		D42ED03B2C6E0EBD00010DC7 /* FaceSegmentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */; };
+		D42ED03B2C6E0EBD00010DC7 /* KitemiruView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42ED03A2C6E0EBD00010DC7 /* KitemiruView.swift */; };
+		D484D0052C70B64900CABEBC /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484D0042C70B64900CABEBC /* UIImage+extension.swift */; };
+		D484D0082C70D6A200CABEBC /* KitemiruViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484D0072C70D6A200CABEBC /* KitemiruViewState.swift */; };
+		D484D00A2C70D83400CABEBC /* Segmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484D0092C70D83400CABEBC /* Segmentation.swift */; };
+		D484D00C2C70D87D00CABEBC /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484D00B2C70D87D00CABEBC /* Face.swift */; };
+		D484D00F2C70DAEE00CABEBC /* DetectFaceReactangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D484D00E2C70DAEE00CABEBC /* DetectFaceReactangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +66,12 @@
 		D42ED0332C6DF9C400010DC7 /* FaceDetectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectView.swift; sourceTree = "<group>"; };
 		D42ED0352C6DFA3200010DC7 /* FaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceType.swift; sourceTree = "<group>"; };
 		D42ED0372C6DFF8800010DC7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSegmentationView.swift; sourceTree = "<group>"; };
+		D42ED03A2C6E0EBD00010DC7 /* KitemiruView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitemiruView.swift; sourceTree = "<group>"; };
+		D484D0042C70B64900CABEBC /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		D484D0072C70D6A200CABEBC /* KitemiruViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitemiruViewState.swift; sourceTree = "<group>"; };
+		D484D0092C70D83400CABEBC /* Segmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segmentation.swift; sourceTree = "<group>"; };
+		D484D00B2C70D87D00CABEBC /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		D484D00E2C70DAEE00CABEBC /* DetectFaceReactangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectFaceReactangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +124,9 @@
 			children = (
 				D42ED02D2C6CD28000010DC7 /* Core */,
 				D42ED03D2C6E253500010DC7 /* ML */,
+				D484D0062C70D68100CABEBC /* Kitemiru */,
 				D42ECFFC2C6CCB9300010DC7 /* kitemiruApp.swift */,
 				D42ED0372C6DFF8800010DC7 /* HomeView.swift */,
-				D42ED03A2C6E0EBD00010DC7 /* FaceSegmentationView.swift */,
 				D42ED0002C6CCB9700010DC7 /* Assets.xcassets */,
 				D42ED0022C6CCB9700010DC7 /* Preview Content */,
 			);
@@ -151,6 +161,7 @@
 		D42ED0262C6CCF1500010DC7 /* FaceParsing */ = {
 			isa = PBXGroup;
 			children = (
+				D484D0092C70D83400CABEBC /* Segmentation.swift */,
 				D42ED0272C6CCF3900010DC7 /* CoreMLHelpers.swift */,
 				D42ED0282C6CCF3B00010DC7 /* faceParsing.mlmodelc */,
 				D42ED0292C6CCF3B00010DC7 /* faceParsing.swift */,
@@ -172,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				D42ED02F2C6CD29F00010DC7 /* CIImage+extension.swift */,
+				D484D0042C70B64900CABEBC /* UIImage+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,10 +208,29 @@
 		D42ED03D2C6E253500010DC7 /* ML */ = {
 			isa = PBXGroup;
 			children = (
+				D484D00D2C70DAD000CABEBC /* DetectFaceReactangle */,
 				D42ED0262C6CCF1500010DC7 /* FaceParsing */,
 				D42ED03C2C6E245100010DC7 /* Example */,
 			);
 			path = ML;
+			sourceTree = "<group>";
+		};
+		D484D0062C70D68100CABEBC /* Kitemiru */ = {
+			isa = PBXGroup;
+			children = (
+				D42ED03A2C6E0EBD00010DC7 /* KitemiruView.swift */,
+				D484D0072C70D6A200CABEBC /* KitemiruViewState.swift */,
+				D484D00B2C70D87D00CABEBC /* Face.swift */,
+			);
+			path = Kitemiru;
+			sourceTree = "<group>";
+		};
+		D484D00D2C70DAD000CABEBC /* DetectFaceReactangle */ = {
+			isa = PBXGroup;
+			children = (
+				D484D00E2C70DAEE00CABEBC /* DetectFaceReactangle.swift */,
+			);
+			path = DetectFaceReactangle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,10 +364,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D484D00C2C70D87D00CABEBC /* Face.swift in Sources */,
+				D484D0082C70D6A200CABEBC /* KitemiruViewState.swift in Sources */,
 				D42ED0382C6DFF8800010DC7 /* HomeView.swift in Sources */,
+				D484D00F2C70DAEE00CABEBC /* DetectFaceReactangle.swift in Sources */,
 				D42ED0302C6CD29F00010DC7 /* CIImage+extension.swift in Sources */,
 				D42ED0322C6CDB6700010DC7 /* PhotoPickerView.swift in Sources */,
-				D42ED03B2C6E0EBD00010DC7 /* FaceSegmentationView.swift in Sources */,
+				D484D0052C70B64900CABEBC /* UIImage+extension.swift in Sources */,
+				D484D00A2C70D83400CABEBC /* Segmentation.swift in Sources */,
+				D42ED03B2C6E0EBD00010DC7 /* KitemiruView.swift in Sources */,
 				D42ED0362C6DFA3200010DC7 /* FaceType.swift in Sources */,
 				D42ECFFF2C6CCB9300010DC7 /* FaceSegmentatView.swift in Sources */,
 				D42ED0342C6DF9C400010DC7 /* FaceDetectView.swift in Sources */,
