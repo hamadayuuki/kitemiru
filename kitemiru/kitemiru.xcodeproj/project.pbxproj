@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -73,6 +73,10 @@
 		D484D00B2C70D87D00CABEBC /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		D484D00E2C70DAEE00CABEBC /* DetectFaceReactangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectFaceReactangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		49CBE9162D95006D00383A64 /* Segmentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Segmentation; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D42ECFF62C6CCB9300010DC7 /* Frameworks */ = {
@@ -208,6 +212,7 @@
 		D42ED03D2C6E253500010DC7 /* ML */ = {
 			isa = PBXGroup;
 			children = (
+				49CBE9162D95006D00383A64 /* Segmentation */,
 				D484D00D2C70DAD000CABEBC /* DetectFaceReactangle */,
 				D42ED0262C6CCF1500010DC7 /* FaceParsing */,
 				D42ED03C2C6E245100010DC7 /* Example */,
@@ -247,6 +252,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				49CBE9162D95006D00383A64 /* Segmentation */,
 			);
 			name = kitemiru;
 			productName = kitemiru;
